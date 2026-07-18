@@ -65,13 +65,19 @@ My plan:
 The harness then proceeded to write the script and markdown file. It managed to write a script that can handle the login but it straight away found
 an edge case and it wanted to modify the script to take this info consideration:  a dangling connection that causes the next login to skip menu steps.
 
-After the agent had created the python script and the skill, I prompted it to find the bakery and list the menu using the skill. 
+After the agent had created the python script and the skill, I prompted it to find the bakery and list the menu using the skill, which is was able to complete successfully:
 
-The second prompt we gave it was to 'find the player's starting guild and practice kick'. Using Claude Haiku at this point, it was able to execute the task. 
+//TODO add screenshot
+
+The second prompt we gave it was to 'find the player's starting guild and practice kick'. Using Claude Haiku at this point, it was able to execute the task:
+
+//TODO add screenshot
 
 After that, using Sonnet we asked the agent to create a 'data' folder that would have md files that can retain persistent memory for the player. After this was implemented, the next ask given to Claude Haiku was: 'There is a massive minotaur in the newbie zone north of Midgaard. We want to defeat it, can you make this our primary goal and execute it'. Haiku started executing this goal and it was partially successful navigating to the correct location. It didn't find the massive minotaur but it found the newbie zone and started combat with creepy crawlers. However at this point it became confused with the logic of the game and quit the game before the combat was finished and for this reason it didn't gain any experience for the player. 
 
-I then gave the agent more information where to find the massive minotaur and told it that it is in a 'red room' within the newbie zone. The agent searched through the newbie zone looking for the red room, however it then ran out of movement points and was not able to continue. After several attemps Claude Haiku was not able to figure out how to recover movement points - this means that it was not able to understand the basic functionality - even after giving it step-by-step instructions to sleep and wait for two minutes before waking up, it couldn't get that to work. Switching back to Claude Sonnet 4.6 resolved the problem immediately and it was able to add a 'recover' function to the script which worked. Claude Sonnet was able to also execute the instructions until the end - it found the correct room where the minotaur is located and analysed whether combat with it is possible. 
+I then gave the agent more information where to find the massive minotaur and told it that it is in a 'red room' within the newbie zone. The agent searched through the newbie zone looking for the red room, however it then ran out of movement points and was not able to continue. After several attemps Claude Haiku was not able to figure out how to recover movement points - this means that it was not able to understand the basic functionality - even after giving it step-by-step instructions to sleep and wait for two minutes before waking up, it couldn't get that to work. Switching back to Claude Sonnet 4.6 resolved the problem immediately and it was able to add a 'recover' function to the script which worked. Claude Sonnet was able to also execute the instructions until the end - it found the correct room where the minotaur is located and analysed whether combat with it is possible:
+
+//TODO add screenshot
 
 
 ## Technical Observations
