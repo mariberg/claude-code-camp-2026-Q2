@@ -67,17 +67,20 @@ an edge case and it wanted to modify the script to take this info consideration:
 
 After the agent had created the python script and the skill, I prompted it to find the bakery and list the menu using the skill, which is was able to complete successfully:
 
-//TODO add screenshot
+<img width="1196" height="553" alt="image" src="https://github.com/user-attachments/assets/90a603f7-a194-4b0d-82c9-459667c2203d" />
+
 
 The second prompt we gave it was to 'find the player's starting guild and practice kick'. Using Claude Haiku at this point, it was able to execute the task:
 
-//TODO add screenshot
+<img width="1140" height="113" alt="image" src="https://github.com/user-attachments/assets/712bac1b-be34-41ee-b617-25ade4297912" />
+
 
 After that, using Sonnet we asked the agent to create a 'data' folder that would have md files that can retain persistent memory for the player. After this was implemented, the next ask given to Claude Haiku was: 'There is a massive minotaur in the newbie zone north of Midgaard. We want to defeat it, can you make this our primary goal and execute it'. Haiku started executing this goal and it was partially successful navigating to the correct location. It didn't find the massive minotaur but it found the newbie zone and started combat with creepy crawlers. However at this point it became confused with the logic of the game and quit the game before the combat was finished and for this reason it didn't gain any experience for the player. 
 
 I then gave the agent more information where to find the massive minotaur and told it that it is in a 'red room' within the newbie zone. The agent searched through the newbie zone looking for the red room, however it then ran out of movement points and was not able to continue. After several attemps Claude Haiku was not able to figure out how to recover movement points - this means that it was not able to understand the basic functionality - even after giving it step-by-step instructions to sleep and wait for two minutes before waking up, it couldn't get that to work. Switching back to Claude Sonnet 4.6 resolved the problem immediately and it was able to add a 'recover' function to the script which worked. Claude Sonnet was able to also execute the instructions until the end - it found the correct room where the minotaur is located and analysed whether combat with it is possible:
 
-//TODO add screenshot
+<img width="1166" height="272" alt="image" src="https://github.com/user-attachments/assets/0686f0f2-f855-4c0a-8709-b5e42eae2d8f" />
+
 
 
 ## Technical Observations
