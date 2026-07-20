@@ -12,7 +12,6 @@ module Boukensha
       @tools        = {}
     end
 
-    # This is not needed any more as we now register tools with the registry instead of directly on the context
     def register_tool(tool)
       @tools[tool.name] = tool
     end

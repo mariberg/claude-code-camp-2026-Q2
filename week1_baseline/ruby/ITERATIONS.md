@@ -40,7 +40,8 @@ The `ruby/` folder contains each step-by-step iteration for agent.
 - We will need to make some manual adjustments since the original code did not exist in a ruby sub-folder.
 - AI affected the handwritten code and we will identify parts that should be reqritten but we maybe leave them intact not to disturb future layers.
 - We can and will port the code over to Python, we will have to ensure the MudManager Ruby version works with both Ruby and Python.
-- If you 
+- We now register tools with the registry but our code (context.rb) still has direct registration and tools in context. This likely should have been reworked. The context should have reference to tools[] its currently using, and the full table of tools registeredd should live on the registry as registry is the one that should have ownership. This needs to be correct in a future step. 
+
 
 ## Student completion approaches
 
