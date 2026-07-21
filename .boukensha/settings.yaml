@@ -1,6 +1,6 @@
 tasks:
   player:
-    provider: anthropic        # provider name (string)
+    provider: anthropic # provider name (string)
     model: claude-haiku-4-5
     #provider: gemini        # provider name (string)
     #model: gemini-3.5-flash
